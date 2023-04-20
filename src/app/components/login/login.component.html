@@ -1,0 +1,24 @@
+<div class="body">
+  <div class="login">
+<form [formGroup]="form" (ngSubmit)="ingresar()">
+    
+        <img src="../../../assets/img/pokemon-trainer.png"  alt="" width="50%" height="50%">
+        <h1 class="h3 mb-3 fw-normal">Crear nuevo usuario</h1>
+        <mat-form-field class="ancho" appearance="fill">
+            <mat-label>Usuario</mat-label>
+            <input matInput autocomplete="off" formControlName ="usuario">
+          </mat-form-field><br>
+
+          <mat-form-field class="ancho" appearance="fill">
+            <mat-label>Rol</mat-label>
+            <select matNativeControl required formControlName ="rol">
+              <option value="Administrador">Administrador</option>
+              <option value="Cliente">Cliente</option>
+            </select>
+          </mat-form-field><br>
+          
+          <button  type = "submit" class="ancho" mat-raised-button mat-button color="primary">Añadir</button>
+  </form>
+</div>
+</div>
+ 

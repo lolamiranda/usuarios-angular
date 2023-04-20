@@ -1,0 +1,20 @@
+
+    <mat-toolbar>
+      <span>Darse baja</span>
+    </mat-toolbar>
+
+    <div class="body">
+      <div class="login">
+    <form [formGroup]="form" (ngSubmit)="eliminar()">
+        
+            <img src="../../../../assets/img/caterpie.png"  alt="" width="50%" height="50%">
+            <mat-form-field class="ancho" appearance="fill">
+                <mat-label>Id</mat-label>
+                <input matInput autocomplete="off" formControlName ="id">
+              </mat-form-field><br>
+    
+              <button  type = "submit" class="ancho" mat-raised-button mat-button color="primary">Eliminar</button>
+      </form>
+    </div>
+    </div>
+     

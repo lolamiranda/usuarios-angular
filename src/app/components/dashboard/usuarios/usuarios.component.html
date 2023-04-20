@@ -1,0 +1,35 @@
+<div class="container">
+<mat-toolbar>
+    <span>Consulta de usuarios</span>
+  </mat-toolbar>
+<br>
+
+<div class="container mt-5">
+  <div class="row">
+      <div class="col-lg-8 offset-lg-2">
+          <div class="card">
+              <div class="card-body text-center">
+                <br>
+                  <table *ngIf="usuarios.length > 0" class="table table-striped mt-3">
+                      <thead>
+                        <tr>
+                          <th scope="col">Id</th>
+                          <th scope="col">Nombre</th>
+                          <th scope="col">Rol</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr *ngFor="let usuario of usuarios | filter:searchText">
+                          <td>{{ usuario._id }}</td>
+                          <td>{{ usuario.nombre }}</td>
+                          <td>{{ usuario.rol }}</td>
+                         
+                        </tr>
+                      </tbody>
+                    </table>
+                    <h5 style="text-align: start; margin-top: 10px;" *ngIf="usuarios.length == 0">No hay usuarios para mostrar</h5>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
